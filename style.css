@@ -1,0 +1,109 @@
+/* Reset default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: backgroundChange 5s infinite alternate;
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    animation: scaleUp 1s forwards, bounceIn 1.5s ease-out;
+}
+
+/* Title styling */
+.title {
+    font-size: 36px;
+    color: #ff69b4;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* Message styling */
+.message {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 25px;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+    animation-delay: 1s;
+    line-height: 1.5;
+}
+
+/* Signature styling */
+.signature {
+    font-style: italic;
+    font-size: 18px;
+    color: #ff69b4;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+    animation-delay: 2s;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Scale-up animation for container */
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Bounce-in effect for container */
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-100%);
+    }
+    60% {
+        transform: translateY(10%);
+    }
+    80% {
+        transform: translateY(-5%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Background color change animation */
+@keyframes backgroundChange {
+    0% {
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
+    }
+    100% {
+        background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+    }
+}
